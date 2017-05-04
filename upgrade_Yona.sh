@@ -7,7 +7,7 @@ YONA_DATA=/home/pi/yona_data
 
 # Check of Yona_Version
 echo ""
-YONANOW=`ls |grep yona-`
+YONANOW=`ls -al | awk '/^d/{print $NF}' |grep yona-`
 YONAINSTALLED="1"
 if [ $YONANOW ]; then
         echo -e "\033[33m Currunt Yona's Version : "$YONANOW;
