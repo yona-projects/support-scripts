@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Script Version 20170504 by Minishanell
 
 # Setting for YONA_DATA
@@ -7,15 +6,15 @@ YONA_DATA=/home/pi/yona_data
 
 # Check of Yona_Version
 echo ""
-YONANOW=`ls -al | awk '/^d/{print $NF}' |grep yona-`
+YONANOW=`ls |grep yona-`
 YONAINSTALLED="1"
 if [ $YONANOW ]; then
-        echo -e "\033[33m Currunt Yona's Version : "$YONANOW;
-        echo -e "\033[0m";
+        echo "\033[33m Currunt Yona's Version : "$YONANOW;
+        echo "\033[0m";
         YONAINSTALLED="1";
 else
-        echo -e "\033[31m Yona is Not Installed.";
-        echo -e "\033[0m";
+        echo "\033[31m Yona is Not Installed.";
+        echo "\033[0m";
         YONAINSTALLED="0";
 fi
 
